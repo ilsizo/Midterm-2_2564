@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+  <!-- The head tags include page information, e.g. metadata, as well as any included CSS and JS scripts. Everything in the head is loaded by the browser before the body. -->
+  <head>
+    <!-- The title tag defines the page's title that shows up in the browser's tab bar -->
+    <title>Doggo Pupper's Homepage</title>
+
+    <!-- The link tag lets us link CSS files to the HTML and apply the CSS to the page. The 'href="style.css"'' is a reference to the path of where the CSS file lives. -->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="JavaScript.js"></script>
+  </head>
+
+  <!-- The body tags include all page content. These objects will be rendered on the page. -->
+  <body>
+    <!--Divs and spans can be used to logically and structurally organize your page
+      Here we use divs to separate different sections of the page: about, courses, interests and pet information
+      * divs are block elements and are separated by newlines or breaks in the page
+      * spans are inline elements and are displayed without newlines between them
+    -->
+
+    <!--Each div (and any other tag) can have a class and id.
+      The class can be shared with other tags.
+      The id is unique to this tag.
+      The class and id can be selected by CSS rules to style groups of elements differently.
+    -->
+
+    <!-- Bootstrap requires a container element to wrap their grid system. -->
+    <div class="container">
+
+      <!-- Boostrap defines a row element. -->
+      <div class="row">
+        <!-- Bootstrap defines how many columns we want the row to be split into. -->
+        <div class="col-md-12">
+          <!-- The <h1> tag is a header tag of the largest size. -->
+          <h1>Doggo Pupper</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <!-- The <h2> tag is a header tag of the second largest size. -->
+          <h2>About Me</h2>
+          <!-- The <p> tag represents a paragraph of text. -->
+          <p>
+            Hello. I love
+            <!--The <a> tag is a link.
+              The text between the <a> and </a> tags is the displayed text.
+              The href attribute has the link's target URL.-->
+            <a href="http://en.wikipedia.org/wiki/User_interface_design">User Interface Design</a>.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- The <img> tag lets us add images. -->
+          <div class="container" style="padding-left: 0px;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn"></span>
+            <img id="expandedImg" class="1" width="267px" height="285px" onclick="myFunction(this);">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Classes</h2>
+          <!--Tables can be used to group text or images into rows and columns-->
+          <table class="table">
+            <thead>
+              <!--Each <tr> is a row-->
+              <tr>
+                <!--Each <th> or <td> is a cell.
+                  The number of cells in a row determines the number of columns in the table.
+                -->
+                <th>Course Number</th>
+                <th>Course Title</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!--A <td> or cell can span multiple columns using the colspan attribute-->
+                <td colspan=3>Spring 2016</td>
+              </tr>
+              <!--We give certain rows the "currentlytaking" class, so we can color them differently in a CSS rule-->
+              <tr>
+                <td><a href="http://stellar.mit.edu/S/course/6/sp14/6.813/index.html">6.813</a></td>
+                <td>User Interface Design</td>
+              </tr>
+              <tr>
+                <td><a href="http://ai6034.mit.edu/fall12/index.php?title=Main_Page">6.034</a></td>
+                <td>Artificial Intelligence</td>
+              </tr>
+              <tr>
+                <td><a href="http://stellar.mit.edu/S/course/6/fa13/6.006/">6.006</a></td>
+                <td>Introduction to Algorithms</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h2>Extracurriculars</h2>
+          <ul>
+            <li> Asian Dance Team
+            <li> DanceTroupe
+            <li> MIT Poker Club
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-9">
+          <!-- The <h2> tag is a header tag of the second largest size. -->
+          <h2>Contact</h2>
+          <!-- The <p> tag represents a paragraph of text. -->
+          <form>
+            <!--The form contains several <input> elements which receive info from the user.
+            Each <input> element has a 'type' attribute, which determines if it's a textbox, radio button, etc.-->
+            <div class="form-group form-inline">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <input type="password" class="form-control" placeholder="">
+            </div>
+            <!-- The <button> tag represents a button. -->
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
